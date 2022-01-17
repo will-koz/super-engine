@@ -1,14 +1,23 @@
 {
 	"header": {
-		"icon": "",
+		"icon": "icon.png",
 		"styles": ["themes/light.css", "themes/main.css"],
 		"title": "Home Page"
 	},
 
 	"pages": [
 		{
+			"page": "main",
+			"search": [
+				""
+			]
 		},
 		{
+			"page": "memes"
+		},
+		{
+			"page": "secrets",
+			"pass": "6b3a55e0261b0304143f805a24924d0c1c44524821305f31d9277843b8a10f4e"
 		}
 	]
 }

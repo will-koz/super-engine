@@ -1,3 +1,38 @@
 body {
 	background: var(--back-ground);
+	font-family: Montserrat, Ubuntu, Helvetica;
+	margin: 0px;
+}
+
+input {
+	border: 1px solid var(--input-border);
+	border-radius: 100px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#heading {
+	background: var(--heading-bg);
+	color: var(--heading-text);
+	height: 20%;
+	margin: 0px;
+	position: fixed;
+	width: 100%;
+
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+#heading > form {
+	height: 100%;
+	width: 80%;
+
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+#heading > form > input {
+	width: 30%;
 }
