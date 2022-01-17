@@ -1,0 +1,14 @@
+{
+	"header": {
+		"icon": "",
+		"styles": ["themes/light.css", "themes/main.css"],
+		"title": "Home Page"
+	},
+
+	"pages": [
+		{
+		},
+		{
+		}
+	]
+}
