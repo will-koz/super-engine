@@ -1,23 +1,48 @@
 {
 	"header": {
 		"icon": "icon.png",
-		"styles": ["themes/light.css", "themes/main.css"],
+		"styles": ["themes/color-light.css", "themes/layout-main.css"],
 		"title": "Home Page"
 	},
 
 	"pages": [
 		{
 			"page": "main",
-			"search": [
-				""
+
+			"heading": {
+				"haspageswitcher": true
+			},
+
+			"content": [
+				[["text", "Hello World"]],
+				[["text", "Hello"], ["text", "World"]],
+				[["text", "World"], ["text", "Hello"]],
+				[["table", [["text", "there"], ["text", "is"], ["text", "an"]], [["text", "impostor"], ["text", "among"], ["text", "us"]]]]
 			]
 		},
 		{
 			"page": "memes"
 		},
 		{
+			"page": "search",
+
+			"heading": {
+				"haspageswitcher": true
+			},
+
+			"content": [
+				[
+					["search", "Google", "https://google.com/search", "q"],
+					["search", "Amazon", "https://www.amazon.com/s", "k"],
+					["search", "IMDb", "https://www.imdb.com/find", "q"],
+					["search", "Reddit", "https://reddit.com/search", "q"],
+					["search", "YouTube", "https://www.youtube.com/results", "search_results"]
+				]
+			]
+		},
+		{
 			"page": "secrets",
-			"pass": "6b3a55e0261b0304143f805a24924d0c1c44524821305f31d9277843b8a10f4e"
+			"pass": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8"
 		}
 	]
 }

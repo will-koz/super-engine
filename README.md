@@ -5,3 +5,5 @@ This is just the title the GitHub name-choser chose for the repository. It is a 
  - [ ] Add dark and nord theme.
  - [ ] Make title customizeable by page.
  - [ ] Make a decent icon.
+ - [ ] Allow tabindex / autofocus to be selected as a parameter
+ - [ ] Redirect to index.php
