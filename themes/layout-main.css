@@ -1,0 +1,120 @@
+body {
+	background: var(--back-ground);
+	font-family: Montserrat, Ubuntu, Helvetica;
+	margin: 0px;
+}
+
+img {
+	border-radius: 10px;
+	box-shadow: none;
+	transition: 0.3s ease;
+}
+
+img:hover {
+	border-radius: 5px;
+	box-shadow: 5px 5px var(--section-shadow);
+	transition: 0.3s ease;
+}
+
+input {
+	background: var(--input-bg);
+	border: 1px solid var(--input-border);
+	border-radius: 100px;
+	padding: 10px;
+	text-align: center;
+}
+
+table, tbody, tr, td {
+	border-collapse: collapse;
+	margin: 0px;
+	padding: 0px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#heading {
+	background: var(--heading-bg);
+	color: var(--heading-text);
+	height: 20%;
+	margin: 0px;
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+#heading > form {
+	height: 100%;
+	width: 80%;
+
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+#heading > form > input {
+	font-size: 26px;
+	width: 30%;
+}
+
+#content {
+	overflow: initial;
+	padding: 0px;
+	position: absolute;
+	top: 20%;
+	width: 100%
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.section {
+	background-color: var(--section-bg);
+	border-radius: 10px;
+	box-shadow: none;
+	color: var(--section-text);
+	padding: 25px;
+	transition: 0.3s ease;
+}
+
+.section > form {
+	width: 100%;
+
+	align-items: center;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.section > form > input {
+	width: 30%;
+}
+
+.section:hover {
+	background-color: var(--section-bg-hover);
+	border-radius: 5px;
+	box-shadow: 5px 5px var(--section-shadow);
+	transition: 0.3s ease;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@media only screen and (min-width: 1080px) {
+	#content {
+		display: flex;
+		justify-content: space-evenly;
+	}
+	.column {
+		width: 100%;
+	}
+	.section {
+		margin: 10px;
+	}
+}
+
+@media only screen and (max-width: 1080px) {
+	.section {
+		margin: 25px;
+	}
+}
