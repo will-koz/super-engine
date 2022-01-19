@@ -4,6 +4,11 @@ body {
 	margin: 0px;
 }
 
+a {
+	color: var(--link-text);
+	text-decoration: none;
+}
+
 img {
 	border-radius: 10px;
 	box-shadow: none;
@@ -28,6 +33,7 @@ table, tbody, tr, td {
 	border-collapse: collapse;
 	margin: 0px;
 	padding: 0px;
+	table-layout: fixed;
 	width: 100%;
 }
 
@@ -70,6 +76,16 @@ table, tbody, tr, td {
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.img-background {
+	color: var(--light-text) !important;
+	transition: 0.3s ease;
+}
+
+.img-background:hover {
+	padding-bottom: 100px !important;
+	transition: 0.3s ease;
+}
 
 .section {
 	background-color: var(--section-bg);

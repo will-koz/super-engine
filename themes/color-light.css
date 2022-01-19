@@ -8,6 +8,10 @@
 	--input-bg: rgb(255, 255, 255);
 	--input-border: rgb(233, 233, 233);
 
+	--light-text: rgb(252, 254, 255);
+
+	--link-text: rgb(0, 200, 230);
+
 	--section-bg: rgb(237, 237, 237);
 	--section-bg-hover: rgb(212, 212, 212);
 	--section-shadow: rgb(13, 13, 13);

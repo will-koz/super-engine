@@ -1,4 +1,9 @@
 <?php
+function get_first_image_from_subreddit ($subreddit) {
+	$subjson = json_decode(file_get_contents("https://reddit.com/r/$subreddit[0].json"));
+	foreach ($subjson->data->children as $child) if (isset($child->data->post_hint) && $child->data->post_hint == "image") return $child->data->url;
+}
+
 function get_html_footer () {
 	return "</body></html>";
 }
@@ -68,9 +73,31 @@ function section_img ($data) {
 	return $return_text;
 }
 
+function section_link ($data) {
+	$return_text = "<div class=\"section\">";
+	$return_text .= "<a href=\"$data[0]\">$data[1]</a>";
+	$return_text .= "</div>";
+	return $return_text;
+}
+
 function section_search ($data) {
 	$return_text = "<div class=\"section\">";
 	$return_text .= get_search_section($data);
+	$return_text .= "</div>";
+	return $return_text;
+}
+
+function section_subreddit ($subreddit) {
+	$return_text = "<div class=\"section img-background\" style=\"background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .8) ), ";
+	$return_text .= "url('" . get_first_image_from_subreddit($subreddit) . "')\">";
+	$return_text .= "<h2><a href=\"https://reddit.com/r/$subreddit[0]\">r/$subreddit[0]</a></h2>";
+	if ($subreddit[1]) {
+		$return_text .= "<a href=\"https://reddit.com/r/$subreddit[0]/new\">r/$subreddit[0]/new</a> ";
+		$return_text .= "<a href=\"https://reddit.com/r/$subreddit[0]/top?t=week\">r/$subreddit[0]/top</a><br>";
+		$return_text .= "<a href=\"https://old.reddit.com/r/$subreddit[0]\">old/r/$subreddit[0]</a> ";
+		$return_text .= "<a href=\"https://old.reddit.com/r/$subreddit[0]/new\">old/r/$subreddit[0]/new</a> ";
+		$return_text .= "<a href=\"https://old.reddit.com/r/$subreddit[0]/top?t=week\">old/r/$subreddit[0]/top</a>";
+	}
 	$return_text .= "</div>";
 	return $return_text;
 }

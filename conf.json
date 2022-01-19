@@ -1,7 +1,7 @@
 {
 	"header": {
 		"icon": "icon.png",
-		"styles": ["themes/color-light.css", "themes/layout-main.css"],
+		"styles": ["themes/color-light.css", "themes/fonts-main.css", "themes/layout-main.css"],
 		"title": "Home Page"
 	},
 
@@ -16,12 +16,17 @@
 			"content": [
 				[["text", "Hello World"]],
 				[["text", "Hello"], ["text", "World"]],
-				[["text", "World"], ["text", "Hello"]],
 				[["table", [["text", "there"], ["text", "is"], ["text", "an"]], [["text", "impostor"], ["text", "among"], ["text", "us"]]]]
 			]
 		},
 		{
-			"page": "memes"
+			"page": "memes",
+
+			"content": [
+				[["link", "https://reddit.com/", "Remdit"], ["subreddit", "196", false], ["subreddit", "shitposting", true]],
+				[["subreddit_img", "memes"]],
+				[["search", "Reddit", "https://reddit.com/search", "q"]]
+			]
 		},
 		{
 			"page": "search",
