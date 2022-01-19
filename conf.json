@@ -25,7 +25,12 @@
 			"content": [
 				[["link", "https://reddit.com/", "Remdit"], ["subreddit", "196", false], ["subreddit", "shitposting", true]],
 				[["subreddit_img", "memes"]],
-				[["search", "Reddit", "https://reddit.com/search", "q"]]
+				[
+					["search", "Reddit", "https://reddit.com/search", "q"],
+					["person", "FitMC", {
+						"img": "https://yt3.ggpht.com/ytc/AKedOLS3khKa_Y10CJJ8f4Gx1JX9xt2-jjMk6mzFC8N0rQ=s176-c-k-c0x00ffffff-no-rj-mo",
+						"reddit": "2b2t"
+				}]]
 			]
 		},
 		{

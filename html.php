@@ -49,6 +49,12 @@ function get_html_content_foot () {
 	return $return_text;
 }
 
+function get_html_image_style ($location) {
+	$return_text = "style=\"background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .8) ), ";
+	$return_text .= "url('$location'); background-position: center; color: white\"";
+	return $return_text;
+}
+
 function get_page_switcher_section () {
 	$return_text = "<form action=\"index.php\" method=\"post\">";
 	$return_text .= "<input type=\"text\" name=\"page\" placeholder=\"Page...\" />";
@@ -80,6 +86,15 @@ function section_link ($data) {
 	return $return_text;
 }
 
+function section_person ($person) {
+	$return_text = "<div class=\"section\"";
+	if (isset($person[1]->img)) $return_text .= " " . get_html_image_style($person[1]->img) . " >";
+	else $return_text .= ">";
+	$return_text .= "<h2>$person[0]</h2>";
+	$return_text .= "</div>";
+	return $return_text;
+}
+
 function section_search ($data) {
 	$return_text = "<div class=\"section\">";
 	$return_text .= get_search_section($data);
@@ -88,8 +103,7 @@ function section_search ($data) {
 }
 
 function section_subreddit ($subreddit) {
-	$return_text = "<div class=\"section img-background\" style=\"background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .8) ), ";
-	$return_text .= "url('" . get_first_image_from_subreddit($subreddit) . "')\">";
+	$return_text = "<div class=\"section img-background\" " . get_html_image_style(get_first_image_from_subreddit($subreddit)) . ">";
 	$return_text .= "<h2><a href=\"https://reddit.com/r/$subreddit[0]\">r/$subreddit[0]</a></h2>";
 	if ($subreddit[1]) {
 		$return_text .= "<a href=\"https://reddit.com/r/$subreddit[0]/new\">r/$subreddit[0]/new</a> ";

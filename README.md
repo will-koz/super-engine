@@ -9,3 +9,7 @@ This is just the title the GitHub name-choser chose for the repository. It is a 
  - [ ] Redirect to index.php
  - [ ] Add fonts
  - [ ] Create Installer / Makefile
+
+## Notes
+
+No, r/2b2t isn't FitMC's person subreddit, but I want to showcase all of the functionality in the sample JSON config, and it was the closest.
