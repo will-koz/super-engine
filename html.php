@@ -89,8 +89,12 @@ function section_link ($data) {
 function section_person ($person) {
 	$return_text = "<div class=\"section\"";
 	if (isset($person[1]->img)) $return_text .= " " . get_html_image_style($person[1]->img) . " >";
+	else if (isset($person[1]->reddit)) $return_text .= " " . get_html_image_style(get_first_image_from_subreddit(array($person[1]->reddit))) . " >";
 	else $return_text .= ">";
 	$return_text .= "<h2>$person[0]</h2>";
+	if (isset($person[1]->insta)) $return_text .= "<a href=\"https://www.instagram.com/" . $person[1]->insta . "\">Instagram: " . $person[1]->insta . "</a><br>";
+	if (isset($person[1]->reddit)) $return_text .= "<a href=\"https://www.reddit.com/r/" . $person[1]->reddit . "\">Reddit: " . $person[1]->reddit . "</a><br>";
+	if (isset($person[1]->twitter)) $return_text .= "<a href=\"https://www.twitter.com/" . $person[1]->twitter . "\">Twitter: " . $person[1]->twitter . "</a><br>";
 	$return_text .= "</div>";
 	return $return_text;
 }
