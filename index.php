@@ -10,4 +10,6 @@ echo get_html_header($JSON_CONFIG->header->styles, $JSON_CONFIG->header->icon, $
 include "render.php";
 
 echo get_html_footer();
+
+include "version.php";
 ?>
