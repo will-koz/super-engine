@@ -81,7 +81,7 @@ function section_img ($data) {
 
 function section_link ($data) {
 	$return_text = "<div class=\"section\">";
-	$return_text .= "<a href=\"$data[0]\">$data[1]</a>";
+	$return_text .= "<a target=\"_blank\" href=\"$data[0]\">$data[1]</a>";
 	$return_text .= "</div>";
 	return $return_text;
 }
@@ -92,9 +92,9 @@ function section_person ($person) {
 	else if (isset($person[1]->reddit)) $return_text .= " " . get_html_image_style(get_first_image_from_subreddit(array($person[1]->reddit))) . " >";
 	else $return_text .= ">";
 	$return_text .= "<h2>$person[0]</h2>";
-	if (isset($person[1]->insta)) $return_text .= "<a href=\"https://www.instagram.com/" . $person[1]->insta . "\">Instagram: " . $person[1]->insta . "</a><br>";
-	if (isset($person[1]->reddit)) $return_text .= "<a href=\"https://www.reddit.com/r/" . $person[1]->reddit . "\">Reddit: " . $person[1]->reddit . "</a><br>";
-	if (isset($person[1]->twitter)) $return_text .= "<a href=\"https://www.twitter.com/" . $person[1]->twitter . "\">Twitter: " . $person[1]->twitter . "</a><br>";
+	if (isset($person[1]->insta)) $return_text .= "<a target=\"_blank\" href=\"https://www.instagram.com/" . $person[1]->insta . "\">Instagram: " . $person[1]->insta . "</a><br>";
+	if (isset($person[1]->reddit)) $return_text .= "<a target=\"_blank\" href=\"https://www.reddit.com/r/" . $person[1]->reddit . "\">Reddit: " . $person[1]->reddit . "</a><br>";
+	if (isset($person[1]->twitter)) $return_text .= "<a target=\"_blank\" href=\"https://www.twitter.com/" . $person[1]->twitter . "\">Twitter: " . $person[1]->twitter . "</a><br>";
 	$return_text .= "</div>";
 	return $return_text;
 }
@@ -108,13 +108,13 @@ function section_search ($data) {
 
 function section_subreddit ($subreddit) {
 	$return_text = "<div class=\"section img-background\" " . get_html_image_style(get_first_image_from_subreddit($subreddit)) . ">";
-	$return_text .= "<h2><a href=\"https://reddit.com/r/$subreddit[0]\">r/$subreddit[0]</a></h2>";
+	$return_text .= "<h2><a target=\"_blank\" href=\"https://reddit.com/r/$subreddit[0]\">r/$subreddit[0]</a></h2>";
 	if ($subreddit[1]) {
-		$return_text .= "<a href=\"https://reddit.com/r/$subreddit[0]/new\">r/$subreddit[0]/new</a> ";
-		$return_text .= "<a href=\"https://reddit.com/r/$subreddit[0]/top?t=week\">r/$subreddit[0]/top</a><br>";
-		$return_text .= "<a href=\"https://old.reddit.com/r/$subreddit[0]\">old/r/$subreddit[0]</a> ";
-		$return_text .= "<a href=\"https://old.reddit.com/r/$subreddit[0]/new\">old/r/$subreddit[0]/new</a> ";
-		$return_text .= "<a href=\"https://old.reddit.com/r/$subreddit[0]/top?t=week\">old/r/$subreddit[0]/top</a>";
+		$return_text .= "<a target=\"_blank\" href=\"https://reddit.com/r/$subreddit[0]/new\">r/$subreddit[0]/new</a> ";
+		$return_text .= "<a target=\"_blank\" href=\"https://reddit.com/r/$subreddit[0]/top?t=week\">r/$subreddit[0]/top</a><br>";
+		$return_text .= "<a target=\"_blank\" href=\"https://old.reddit.com/r/$subreddit[0]\">old/r/$subreddit[0]</a> ";
+		$return_text .= "<a target=\"_blank\" href=\"https://old.reddit.com/r/$subreddit[0]/new\">old/r/$subreddit[0]/new</a> ";
+		$return_text .= "<a target=\"_blank\" href=\"https://old.reddit.com/r/$subreddit[0]/top?t=week\">old/r/$subreddit[0]/top</a>";
 	}
 	$return_text .= "</div>";
 	return $return_text;
