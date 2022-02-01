@@ -1,0 +1,19 @@
+:root {
+        --back-ground: rgb(222, 222, 222);
+        --fore-ground: rgb(252, 254, 255);
+
+        --heading-bg: rgba(255, 255, 255, 0.5);
+        --heading-text: rgb(20, 20, 20);
+
+        --input-bg: rgb(255, 255, 255);
+        --input-border: rgb(233, 233, 233);
+
+        --light-text: rgb(252, 254, 255);
+
+        --link-text: rgb(0, 200, 230);
+
+        --section-bg: rgb(237, 237, 237);
+        --section-bg-hover: rgb(212, 212, 212);
+        --section-shadow: rgb(13, 13, 13);
+        --section-text: rgb(10, 10, 10);
+}
