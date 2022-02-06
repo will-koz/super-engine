@@ -1,7 +1,7 @@
 {
 	"header": {
 		"icon": "icon.png",
-		"styles": ["themes/color-light.css", "themes/fonts-main.css", "themes/layout-main.css"],
+		"styles": ["themes/color-dark.css", "themes/fonts-main.css", "themes/layout-main.css"],
 		"title": "Home Page"
 	},
 
