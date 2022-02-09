@@ -1,4 +1,7 @@
 <?php
+
+// This file is not actual html, despite the name. All it does is create html sections
+
 function get_first_image_from_subreddit ($subreddit) {
 	$subjson = json_decode(file_get_contents("https://reddit.com/r/$subreddit[0].json"));
 	foreach ($subjson->data->children as $child) if (isset($child->data->post_hint) && $child->data->post_hint == "image") return $child->data->url;
