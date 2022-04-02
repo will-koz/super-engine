@@ -1,4 +1,5 @@
 # super-engine
+**super-engine is now depreciated. I plan to make a similar project soon that works as a startpage and content scraper, but have not worked on this in long enought that people coming to this page should know that I don't look at it.**
 This is just the title the GitHub name-choser chose for the repository. It is a way to turn JSON files into dynamic PHP pages.
 
 ## TODO
